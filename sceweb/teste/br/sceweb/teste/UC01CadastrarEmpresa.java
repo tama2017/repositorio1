@@ -11,8 +11,13 @@ import br.sceweb.modelo.Empresa;
 import br.sceweb.modelo.EmpresaDAO;
 
 public class UC01CadastrarEmpresa {
+	static EmpresaDao empresaDao;
+	static Empresa   empresa;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		empresaDao = new EmpresaDao();
+		empresa = new Empresa();
 	}
 
 	@AfterClass
