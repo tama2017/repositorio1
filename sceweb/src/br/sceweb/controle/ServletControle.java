@@ -55,7 +55,7 @@ public class ServletControle extends HttpServlet {
 		String url = "";
 		String resultado = "";
 		request.setAttribute("erro", null);
-		if (parametro.equals("IncluirEmpresa")) {
+	//	if (parametro.equals("IncluirEmpresa")) {
 			url = "/visao/FormEmpresa.jsp";
 			try {
 				resultado = cadastrarEmpresa(request.getParameter("txtCNPJ"), request.getParameter("txtNomeDaEmpresa"),
@@ -70,7 +70,7 @@ public class ServletControle extends HttpServlet {
 				logger.info("erro  = " + e.getMessage());
 
 			}
-		}
+	//	}
 		if (parametro.equals("ConsultarEmpresa")) {
 			url = "/visao/FormEmpresa.jsp";
 			Empresa empresa = new Empresa();
